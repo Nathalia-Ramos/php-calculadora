@@ -1,38 +1,31 @@
 <?php
 
-	
+		
+		$valor1 = (double) 0 ;
+		$valor2 = (double) 0;
+		$resultado = (double) 0;
+			
 
-
-	if(isset($_GET['btncalc'])){
+		if(isset($_GET['btncalc'])){
 
 		$somar = $_GET['rdocalc'];
 		$subtrair = $_GET['rdocalc'];
 		$multiplicar= $_GET['rdocalc'];
 		$dividir = $_GET['rdocalc'];
 
-	if(isset($_GET['somar'])){
-		$Somar = $_GET['somar'];
+		$operacao = $_GET ['rdocalc'];
+	//tratamento para recuperar os checkbox que foram selecionados no formulario
+	if($operacao == "somar"){
+		$resultado = ($valor1 + $valor2);
+	}else if ($operacao == "subtrair"){
+		$resultado = ($valor1 - $valor2);
+	}else if($operacao == "multiplicar"){
+		$resultado = ($valor1 * $valor2);
+	}else {
+		$resultado = ($valor1 / $valor2);
 	}
 
-	if(isset($_GET['subtrair'])){
-		$Subtrair = $_GET['subtrair'];
 	}
-
-	
-	if(isset($_GET['multiplicar'])){
-		$Multiplicar = $_GET['multiplicar'];
-	}
-
-	if(isset($_GET['dividir'])){
-		$Dividir= $_GET['dividir'];
-	}
-
-
-	}
-
-	
-
-
 
 ?>
 <html>
@@ -61,7 +54,8 @@
 							
 						</div>	
 						<div id="resultado">
-						0
+							<?php echo ($resultado)?>
+	
 						</div>
 						
 					</form>
