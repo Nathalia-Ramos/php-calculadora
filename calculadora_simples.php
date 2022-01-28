@@ -41,7 +41,7 @@
             </div>
 
             <div id="form">
-                <form name="frmcalculadora" method="get" action="">
+                <form name="frmcalculadora" method="post" action="">
 						Valor 1:<input type="text" name="txtn1" value="0" > <br>
 						Valor 2:<input type="text" name="txtn2" value="0" > <br>
 						<div id="container_opcoes">
